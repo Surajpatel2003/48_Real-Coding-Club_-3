@@ -148,6 +148,16 @@
             display: inline-block;
             line-height: 1em;
         }
+
+        #pred{
+            margin:50px;
+            border:5px solid magenta;
+            background-color:white;
+            border-radius:20px;
+            padding:15px;
+            font-family:serif;
+            font-size:35px;
+        }
     </style>
 </head>
 
@@ -325,14 +335,17 @@
                     <option value="79">Macleods Daman Plant INDIA</option>
 
                 </select>
-
             </div>
         </div>
         
-        <button>predict</button>
+        <button>Estimate Freight Cost</button>
     </form>
     <br>
-    {{prediction_text}}
+    <div id='pred'>
+        {{prediction_text}}
+        </div>
+    <br>
+
     <script>
         var textWrapper = document.querySelector('.ml13');
         textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");

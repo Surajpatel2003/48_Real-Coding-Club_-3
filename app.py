@@ -16,7 +16,7 @@ def predict():
     final_features = [np.array(int_features)]
     prediction = model.predict(final_features)
     price = round(prediction[0], 2)
-    return render_template('index1.html', prediction_text="The feight cost is $  {}".format(price))
+    return render_template('index1.html', prediction_text="The Freight Cost is $ {}".format(price))
 
 if __name__=='__main__':
     app.run(debug=True)
